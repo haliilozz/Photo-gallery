@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 75%;
+  display: flex;
+}
+.box {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  flex: 0.5;
+  position: relative;
+  text-align: center;
+  width: 90vw;
+  border-radius: 50px;
+  margin: 10px;
+  transition: flex 0.7s ease-in;
+}
+
+.box h3 {
+  position: absolute;
+  color: #fff;
+  bottom: 40px;
+  left: 30px;
+  font-size: 3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.box.active {
+  flex: 5;
+}
+
+.box.active h3 {
+  opacity: 1;
+}
